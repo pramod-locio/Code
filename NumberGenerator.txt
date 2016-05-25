@@ -1,0 +1,65 @@
+public class Simple{
+public void GeneratedNumber(String name)
+{
+      int n,i,sum=0;
+      n=name.length();
+      char arr[]=name.toUpperCase().toCharArray();
+      char x[]=new char[n];
+      for(i=0;i<arr.length;i++)
+      {
+         switch(arr[i])
+         {
+              case 'A':
+              case 'E':
+              case 'I':
+              case 'M':
+              case 'Q':
+              case 'U':
+              case 'Y':
+              x[i]='1';
+              break;
+              
+              case 'B':
+              case 'F':
+              case 'J':
+              case 'N':
+              case 'R':
+              case 'V':
+              case 'Z':
+              x[i]='2';
+              break;
+
+              case 'C':
+              case 'G':
+              case 'K':
+              case 'O':
+              case 'S':
+              case 'W':
+              x[i]='3';
+              break;
+
+              case 'D':
+              case 'H':
+              case 'L':
+              case 'P':
+              case 'T':
+              case 'X':
+              x[i]='4';
+              break;
+         }
+       }
+       for(i=0;i<x.length;i++)
+      {
+               sum=sum+x[i];
+               if(sum>15)
+                        sum=sum%15;
+      }
+     if(sum<6)
+          System.out.println(name+(sum+6));
+     else
+         System.out.println(name+sum);
+}
+public static void main(String args[]){
+Simple s=new Simple();
+s.GeneratedNumber("dhlptjhhfjdhjfhjjsdjhhax");
+}}
